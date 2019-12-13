@@ -16,8 +16,16 @@ model
 * use GUIDs for each album?
 
 view
+* displays data of two opposing albums
 * collects which album won the round, sends to controller
 
 controller
-* sends round information to model 
+* sends round results to model 
 * sends album information to view
+
+
+data storage
+* add column to existing data table for wins and losses
+* write to csv after each round with album info and results (make easy to parse)
+* result csv: for each unique user/session store all previous match ups and add
+  to data structure for no repeats

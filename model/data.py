@@ -2,7 +2,7 @@ import glob
 import pandas as pd
 
 dataLocation = "../data/albums/*.xlsx"
-
+artLocation = "../data/artwork/*"
 
 class Data:
 
@@ -21,7 +21,11 @@ class Data:
             excel = pd.read_excel(myfile, "Master")
             self.df = self.df.append(excel)
 
+    def matchArt(self):
+    	# match each album art to its album
+	# use string matching?
+	return
+        
+
     def randomizeTable(self):
         self.df = self.df.sample(frac=1).reset_index(drop=True)
-
-

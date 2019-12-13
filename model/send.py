@@ -10,4 +10,6 @@ def test():
 class Sender():
 	
 	def __init__(self):
-		pass
+		# key: album, val: list of albums already compared
+		# or: hash of sets of albums compared for faster lookup?
+		self.archive = dict()
