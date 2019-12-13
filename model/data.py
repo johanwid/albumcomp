@@ -15,8 +15,7 @@ class Data:
             data.append(myfile)
         return data
 
-    def convertTableToDb(self):
-
+    def convertTableToDf(self):
         data = self.getData()
         for myfile in data:
             excel = pd.read_excel(myfile, "Master")
@@ -26,7 +25,3 @@ class Data:
         self.df = self.df.sample(frac=1).reset_index(drop=True)
 
 
-if __name__ == "__main__":
-    d = Data()
-    d.convertTableToDb()
-    d.randomizeTable()
